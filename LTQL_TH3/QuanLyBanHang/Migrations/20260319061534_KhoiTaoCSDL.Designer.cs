@@ -12,8 +12,8 @@ using QuanLyBanHang.Data;
 namespace QuanLyBanHang.Migrations
 {
     [DbContext(typeof(QLBHDbContext))]
-    [Migration("20260224071559_QLBH1")]
-    partial class QLBH1
+    [Migration("20260319061534_KhoiTaoCSDL")]
+    partial class KhoiTaoCSDL
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace QuanLyBanHang.Migrations
 {
     /// <inheritdoc />
-    public partial class QLBH1 : Migration
+    public partial class KhoiTaoCSDL : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -31,8 +31,8 @@ namespace QuanLyBanHang.Migrations
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     HoVaTen = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DienThoai = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DiaChi = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    DienThoai = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DiaChi = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -59,8 +59,8 @@ namespace QuanLyBanHang.Migrations
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     HoVaTen = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DienThoai = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DiaChi = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    DienThoai = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DiaChi = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     TenDangNhap = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     MatKhau = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     QuyenHan = table.Column<bool>(type: "bit", nullable: false)
@@ -78,11 +78,11 @@ namespace QuanLyBanHang.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     HangSanXuatID = table.Column<int>(type: "int", nullable: false),
                     LoaiSanPhamID = table.Column<int>(type: "int", nullable: false),
-                    TenSanPham = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    TenSanPham = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DonGia = table.Column<int>(type: "int", nullable: false),
                     SoLuong = table.Column<int>(type: "int", nullable: false),
                     HinhAnh = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    MoTa = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Mota = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -110,7 +110,7 @@ namespace QuanLyBanHang.Migrations
                     NhanVienID = table.Column<int>(type: "int", nullable: false),
                     KhachHangID = table.Column<int>(type: "int", nullable: false),
                     NgayLap = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    GhiChuHoaDon = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    GhiChuHoaDon = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
